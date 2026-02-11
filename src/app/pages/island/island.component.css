@@ -1,0 +1,269 @@
+/* Imagen de experiencia con overlay */
+.expe-image {
+  background-image: url('/img/borabora/1.jpg');
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.expe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.expe-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* Contenedor principal de la isla */
+.contain-island {
+  background: #f0dbc5;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+/* Imagen grande de la isla */
+.hero {
+  position: relative;
+  background-image: url('/img/borabora/5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Brush Script MT', cursive;
+  z-index: 1;
+}
+
+.hero-2 {
+  position: relative;
+  background-image: url('/img/paopao/1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero-2 h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Brush Script MT', cursive;
+  z-index: 1;
+}
+
+.hero-3 {
+  position: relative;
+  background-image: url('/img/managua/1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero-3 h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Brush Script MT', cursive;
+  z-index: 1;
+}
+
+.hero-4 {
+  position: relative;
+  background-image: url('/img/sabai/1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero-4 h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Brush Script MT', cursive;
+  z-index: 1;
+}
+
+.hero-5 {
+  position: relative;
+  background-image: url('/img/paue/1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero-5 h1 {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Brush Script MT', cursive;
+  z-index: 1;
+}
+
+/* Galería superpuesta */
+.gallery-container {
+  position: relative;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.gallery-container img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+/* Opciones en general */
+.options-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Tarjeta individual */
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
+  min-height: 550px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.option h3 {
+  background: #733b0a;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.option ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: justify;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.option > div:last-child {
+  margin-top: auto;
+  text-align: center;
+}
+
+.option div p {
+  font-weight: bold;
+}
+
+/* Carrusel en móviles */
+@media (max-width: 768px) {
+  .expe-image {
+    height: 500px;
+  }
+
+  .contain-island {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .container-info {
+    margin-top: 20px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-2 {
+    height: 40vh;
+  }
+
+  .hero-2 h1 {
+    font-size: 3rem;
+  }
+
+  .gallery-container {
+    display: none;
+  }
+
+  .options-carousel {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    width: 300px;
+  }
+
+  .options-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .option {
+    flex: 0 0 85%;
+    min-width: 280px;
+    scroll-snap-align: center;
+    max-width: none;
+  }
+}

@@ -1,0 +1,796 @@
+ <div class="expe-image">
+  <div class="expe-overlay"></div> <!-- Capa oscura -->
+  <div class="expe-text">
+    <h1>Our Experience</h1>
+    <p>Years of dedication delivering exceptional service and unforgettable results.</p>
+  </div>
+</div>
+
+<div class="container mb-5">
+
+  <!--History-->
+  <div class="row mt-5">
+    <h1 class="text-center mb-5">| HISTORY</h1>
+    <!-- Carrusel de Cards -->
+    <div id="tourCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/cool_tour.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Cool - Tour</div>
+                  <div class="section-description">
+                    Explore the Historic Center and Getsemaní alongside a local from Cartagena...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/eat_explore.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Eat & Explore</div>
+                  <div class="section-description">
+                    Discover the Historic Center through its most authentic flavors...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/walking_tour.jpg');">
+                <div class="overlay-text">
+                  <div class="section-title">Walking Tour</div>
+                  <div class="section-description">
+                    Stroll through the cobblestone streets of the Historic Center...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/freedom.jpg');">
+                <div class="overlay-text">
+                  <div class="section-title">The Freedom Trail</div>
+                  <div class="section-description">
+                    Visit San Basilio de Palenque, the first free town in the Americas...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/heroica_city.webp');">
+                <div class="overlay-text">
+                  <div class="section-title">Chronicles of the Heroic City</div>
+                  <div class="section-description">
+                    Explore Cartagena’s most iconic sites including La Popa and the castle...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/cartagena_above.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Cartagena from Above</div>
+                  <div class="section-description">
+                    Discover the history and culture of Cartagena from La Popa and the fortress...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#tourCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#tourCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+
+    <!--Carrusel móvil-->
+    <div id="carouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card-section" style="background-image: url('/img/cool_tour.png');">
+            <div class="overlay-text">
+              <div class="section-title">Cool - Tour</div>
+              <div class="section-description">
+                Explore the Historic Center and Getsemaní alongside a local from Cartagena...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/eat_explore.png');">
+            <div class="overlay-text">
+              <div class="section-title">Eat & Explore</div>
+              <div class="section-description">
+                Discover the Historic Center through its most authentic flavors...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/walking_tour.jpg');">
+            <div class="overlay-text">
+              <div class="section-title">Walking Tour</div>
+              <div class="section-description">
+                Stroll through the cobblestone streets of the Historic Center...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/freedom.jpg');">
+            <div class="overlay-text">
+              <div class="section-title">The Freedom Trail</div>
+              <div class="section-description">
+                Visit San Basilio de Palenque, the first free town in the Americas...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/heroica_city.webp');">
+            <div class="overlay-text">
+              <div class="section-title">Chronicles of the Heroic City</div>
+              <div class="section-description">
+                Explore Cartagena’s most iconic sites including La Popa and the castle...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/cartagena_above.png');">
+            <div class="overlay-text">
+              <div class="section-title">Cartagena from Above</div>
+              <div class="section-description">
+                Discover the history and culture of Cartagena from La Popa and the fortress...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botones del carrusel móvil -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+
+  </div>
+
+
+  <!--Experiencia-->
+  <div class="row mt-5">
+  <h1 class="text-center mb-5">| EXPERIENCES</h1>
+
+  <!-- Carrusel de Cards (Desktop) -->
+  <div id="experienceCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/cool_tour.png');">
+              <div class="overlay-text">
+                <div class="section-title">Culinary Adventure</div>
+                <div class="section-description">
+                  Gastronomy is a fundamental part of Cartagena’s culture, and locals take great pride in their Caribbean cuisine...
+                </div>
+                <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/savor_moment.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">Savor the Moment</div>
+                <div class="section-description">
+                  Dive into the world of rum, one of Colombia’s most iconic beverages. Through a guided tasting led by experts...
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/craft.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">Craft Your Own Sip</div>
+                <div class="section-description">
+                  Dive into the world of mixology in a fun and dynamic class. Guided by an expert..
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/cartgena_corner.png');">
+              <div class="overlay-text">
+                <div class="section-title">The Cartagenan Corner</div>
+                <div class="section-description">
+                  Enjoy a delicious tasting of handcrafted empanadas, paired with a variety of local hot sauces that enhance their unique flavors...
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/dances_feel.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">Dance & Feel: Salsa & Champeta</div>
+                <div class="section-description">
+                  Connect with the vibrant Caribbean culture by learning the steps of two of Colombia’s most popular rhythms: salsa and champeta...
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/bean_cup.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">From the Bean to Cup</div>
+                <div class="section-description">
+                  In this 70-minute experience, you will explore the history and process of Colombian coffee, from cultivation to roasting...
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/breeze.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">Breeze & Color</div>
+                <div class="section-description">
+                  Capture the magic of your most special moments with a unique photo session in the vibrant and historic city of Cartagena, Colombia.
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-section" style="background-image: url('/img/tobacco.jpg');">
+              <div class="overlay-text">
+                <div class="section-title">Journey to the Soul of Tobacco</div>
+                <div class="section-description">
+                  Discover the fascinating history and secrets of tobacco in this experience...
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controles Desktop -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#experienceCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#experienceCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+    </button>
+  </div>
+
+  <!-- Carrusel móvil -->
+  <div id="experienceCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="card-section" style="background-image: url('/img/cool_tour.png');">
+          <div class="overlay-text">
+            <div class="section-title">Culinary Adventure</div>
+            <div class="section-description">
+              This culinary experience, guided by an expert chef, includes a presentation on key ingredients and a hands-on class where you’ll learn to prepare typical dishes like seafood and coconut rice.
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/savor_moment.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">Savor the Moment</div>
+            <div class="section-description">
+              Dive into the world of rum, one of Colombia’s most iconic beverages. Through a guided tasting led by experts...
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/craft.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">Craft Your Own Sip</div>
+            <div class="section-description">
+              Dive into the world of mixology in a fun and dynamic class. Guided by an expert... 
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/cartgena_corner.png');">
+          <div class="overlay-text">
+            <div class="section-title">The Cartagenan Corner</div>
+            <div class="section-description">
+              Enjoy a delicious tasting of handcrafted empanadas, paired with a variety of local hot sauces that enhance their unique flavors...
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/dances_feel.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">Dance & Feel: Salsa & Champeta</div>
+            <div class="section-description">
+              Connect with the vibrant Caribbean culture by learning the steps of two of Colombia’s most popular rhythms: salsa and champeta...
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/bean_cup.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">From the Bean to Cup</div>
+            <div class="section-description">
+              In this 70-minute experience, you will explore the history and process of Colombian coffee, from cultivation to roasting...
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/breeze.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">Breeze & Color</div>
+            <div class="section-description">
+              Capture the magic of your most special moments with a unique photo session in the vibrant and historic city of Cartagena, Colombia.
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card-section" style="background-image: url('/img/tobacco.jpg');">
+          <div class="overlay-text">
+            <div class="section-title">Journey to the Soul of Tobacco</div>
+            <div class="section-description">
+              Discover the fascinating history and secrets of tobacco in this experience. Attendees will learn about the cultivation and fermentation of tobacco leaves. They will hear about the making of cigars, both past and present.
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botones del carrusel móvil -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#experienceCarouselMobile" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#experienceCarouselMobile" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+    </button>
+    </div>
+  </div>
+
+
+  <!--Local-->
+  <div class="row mt-5">
+    <h1 class="text-center mb-5">| DE LOCAL</h1>
+
+    <!-- Carrusel de Cards (Desktop) -->
+    <div id="localCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/drums.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Drums of Expression</div>
+                  <div class="section-description">
+                    Immerse yourself in the vibrant Caribbean rhythm with Kilele’s drum workshop...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/totumo.jpg');">
+                <div class="overlay-text">
+                  <div class="section-title">Totumo Volcano</div>
+                  <div class="section-description">
+                    Experience something truly unique at the Totumo Volcano, where you can immerse yourself in its warm, therapeutic volcanic mud waters... 
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles Desktop -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#localCarouselDesktop" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#localCarouselDesktop" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+
+    <!-- Carrusel móvil -->
+    <div id="localCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card-section" style="background-image: url('/img/drums.png');">
+            <div class="overlay-text">
+              <div class="section-title">Drums of Expression</div>
+              <div class="section-description">
+                Immerse yourself in the vibrant Caribbean rhythm with Kilele’s drum workshop... 
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/totumo.jpg');">
+            <div class="overlay-text">
+              <div class="section-title">Totumo Volcano</div>
+              <div class="section-description">
+                Experience something truly unique at the Totumo Volcano, where you can immerse yourself in its warm, therapeutic volcanic mud waters...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles Móvil -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#localCarouselMobile" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#localCarouselMobile" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+  </div>
+
+
+  <!--Adventure -->
+  
+  <div class="row mt-5">
+    <h1 class="text-center mb-5">| ADVENTURE</h1>
+
+    <!-- Carrusel Desktop -->
+    <div id="adventureCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/atv.png');">
+                <div class="overlay-text">
+                  <div class="section-title">ATV Tierra Bomba</div>
+                  <div class="section-description">
+                    Get ready for an exciting, adrenaline-filled adventure on our thrilling ATV tour! ...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/scuba_diving.jpeg');">
+                <div class="overlay-text">
+                  <div class="section-title">Scuba Diving</div>
+                  <div class="section-description">
+                    Enjoy a unique diving experience in the crystal-clear waters of the Rosario Islands...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/walking_tour.jpg');">
+                <div class="overlay-text">
+                  <div class="section-title">Sport Fishing 4 hrs</div>
+                  <div class="section-description">
+                    Embark on a 4-hour adventure in the waters of Barú, where the thrill of fishing meets unforgettable Caribbean landscapes...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/sport_fishing_6.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Sport Fishing 6 hrs</div>
+                  <div class="section-description">
+                    Enjoy 6 hours of sport fishing in the waters of Barú, where you can catch tropical species while relaxing in the Caribbean Sea...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/sport-fishing_8.png');">
+                <div class="overlay-text">
+                  <div class="section-title">Sport Fishing 8 hrs</div>
+                  <div class="section-description">
+                    This trip is for true fishing enthusiasts! We sail between 12 and 20 miles offshore using the best equipment in its class. We dive and troll. 
+
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-section" style="background-image: url('/img/traditional.jpg');">
+                <div class="overlay-text">
+                  <div class="section-title">Traditional Fishing</div>
+                  <div class="section-description">
+                    Immerse yourself in the local culture with this authentic native fishing tour in La Boquilla, where you'll learn traditional fishing techniques alongside local ...
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles Desktop -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#adventureCarouselDesktop" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#adventureCarouselDesktop" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+
+    <!-- Carrusel Móvil -->
+    <div id="adventureCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card-section" style="background-image: url('/img/atv.png');">
+            <div class="overlay-text">
+              <div class="section-title">ATV Tierra Bomba</div>
+              <div class="section-description">
+                Get ready for an exciting, adrenaline-filled adventure on our thrilling ATV tour!...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/scuba_diving.jpeg');">
+            <div class="overlay-text">
+              <div class="section-title">Scuba Diving</div>
+              <div class="section-description">
+                Enjoy a unique diving experience in the crystal-clear waters of the Rosario Islands, surrounded by stunning underwater landscapes and vibrant marine life... 
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/walking_tour.jpg');">
+            <div class="overlay-text">
+              <div class="section-title">Sport Fishing 4 hrs</div>
+              <div class="section-description">
+                Embark on a 4-hour adventure in the waters of Barú, where the thrill of fishing meets unforgettable Caribbean landscapes...
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/sport_fishing_6.png');">
+            <div class="overlay-text">
+              <div class="section-title">Sport Fishing 6 hrs</div>
+              <div class="section-description">
+                Enjoy 6 hours of sport fishing in the waters of Barú, where you can catch tropical species while relaxing in the Caribbean Sea. The tour includes all necessary equipment and delicious snacks to keep you energized throughout the adventure.
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/sport-fishing_8.png');">
+            <div class="overlay-text">
+              <div class="section-title">Sport Fishing 8 hrs</div>
+              <div class="section-description">
+                This trip is for true fishing enthusiasts! We sail between 12 and 20 miles offshore using the best equipment in its class. We dive and troll.   
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-section" style="background-image: url('/img/traditional.jpg');">
+            <div class="overlay-text">
+              <div class="section-title">Traditional Fishing</div>
+              <div class="section-description">
+                Immerse yourself in the local culture with this authentic native fishing tour in La Boquilla, where you'll learn traditional fishing techniques alongside local fishermen... 
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-light" (click)="enviarWhatsApp('I want information about your Experiences')">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles Móvil -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#adventureCarouselMobile" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#adventureCarouselMobile" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+  </div>
+
+</div>

@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f6f3ee;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Playfair Display', serif;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Aumentar prioridad del lightbox */
+.lb-overlay,
+.lb-container,
+.lb-outerContainer,
+.lb-dataContainer {
+  z-index: 99999 !important;
+  position: fixed !important;
+}
+
+.lb-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body {
+  overflow: visible !important;
+}
+
+
+

@@ -1,0 +1,144 @@
+.boats-image {
+  background-image: url('/img/portada_boats.jpg');
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Nueva capa oscura */
+.boats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad si quieres más oscuro */
+  z-index: 1;
+}
+
+/* Texto encima de la capa oscura */
+.boats-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.boats-text h1,p{
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+.item-boats ul{
+    list-style: none;
+}
+.item-boats li{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    color: #544541;
+}
+
+.p-boats{
+  margin-top: 20px;
+}
+
+.p-boats p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #544541;
+}
+
+.p-boats span{
+   font-size: 30px
+}
+
+.img-uno{
+  height: 80%; 
+  padding-top: 25px;
+}
+
+.img-uno img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px ;
+}
+
+gallery {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Elimina el fondo negro del visor */
+.gallery__img {
+  background-color: transparent !important;
+}
+
+/* Estilos miniaturas personalizadas */
+.gallery-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumb-img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.thumb-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Corrige el visor principal para que no desaparezca */
+g-gallery, .g-carousel, .g-image {
+  background-color: transparent !important;
+  min-height: 300px; /* evita que desaparezca */
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opcional para dar estilo */
+}
+
+g-carousel {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar fondo negro del contenedor del slider */
+.g-slider,
+.g-slider-content,
+.g-box,
+gallery-slider,
+gallery {
+  background-color: #544541 !important;
+  border-radius: 10px !important;
+}
+
+/* Asegura que la imagen ocupe todo el espacio del contenedor */
+.g-image-item {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+

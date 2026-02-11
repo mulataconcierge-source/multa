@@ -1,0 +1,111 @@
+.expe-image {
+  background-image: url('/img/portada_experiences.jpg');
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Nueva capa oscura */
+.expe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad si quieres más oscuro */
+  z-index: 1;
+}
+
+/* Texto encima de la capa oscura */
+.expe-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+
+
+.card-section {
+      position: relative;
+      color: white;
+      text-align: center;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+
+    .overlay-text {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0px 10px 0px;
+    }
+
+    .section-title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .section-description {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .carousel-control-prev {
+      left: -50px;
+    }
+
+    .carousel-control-next {
+      right: -50px;
+    }
+
+
+    @media (max-width: 768px) {
+
+      .expe-image{
+        height: 550px;
+      }
+      .expe-text{
+        width: 300px;
+      }
+      .card-section {
+        height: 300px;
+      }
+
+     .carousel-control-prev,
+      .carousel-control-next {
+        width: 15%;
+        top: 45%;
+        transform: translateY(-50%);
+      }
+
+      .carousel-control-prev {
+        left: 0;
+      }
+
+      .carousel-control-next {
+        right: 0;
+      }
+
+  }

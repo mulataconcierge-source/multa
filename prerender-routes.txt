@@ -1,0 +1,6 @@
+/
+/home
+/experiences
+/island
+/private-villa
+/boats

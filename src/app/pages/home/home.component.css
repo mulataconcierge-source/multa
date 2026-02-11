@@ -1,0 +1,204 @@
+/********seccion de portada de video**************/
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3); /* opcional para oscurecer */
+  z-index: 1;
+}
+/************************************************************************************/
+.contain-get-know-text{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3d2f2b;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.contain-get-know-text h1{
+  color: #3d2f2b;
+}
+.contain-get-know-text p{
+  color: #544541;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 0.1rem;
+}
+
+.contain-photo-get-know {
+  width: 100%;
+  height: 100%; /* asegura que tenga altura como el contenedor de texto */
+  max-height: 700px;
+  overflow: hidden; /* evita que la imagen se desborde */
+}
+
+.contain-photo-get-know img {
+  width: 100%;
+  height: 100%; /* FORZA la altura máxima del contenedor */
+  object-fit: cover; /* recorta para llenar el espacio */
+  display: block;
+  border-radius: 8px;
+}
+
+/**********************section our services of home****************************************/
+.ourservices-contain{
+  padding-bottom: 20px;
+}
+.contain-title-ourservices{
+  border-top: 2px solid #3d2f2b;
+  border-bottom: 2px solid #3d2f2b;
+  padding: 5px 5px 5px;
+}
+.contain-title-ourservices div{
+  text-align: center;
+  color: #5f432c;
+}
+
+.contain-ourservices h4{
+   color: #3d2f2b;
+}
+
+.contain-ourservices li{
+  color: #544541;
+}
+
+.img-our-services {
+  box-shadow: -3px 0 6px rgba(61, 47, 43, 0.4), 
+               3px 0 6px rgba(61, 47, 43, 0.4);
+  border-radius: 5px;
+  border: 1px solid #3d2f2bab;
+  height: 400px;
+  overflow: hidden; /* 🔒 evita que se desborde */
+  display: flex;     /* 💡 centra y ajusta la imagen si quieres */
+  align-items: center;
+  justify-content: center;
+}
+
+.img-our-services img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* o "contain" si quieres ver toda la imagen sin recorte */
+  display: block;
+  border-radius: 5px;
+}
+
+
+ /********************************Style Kind Word*******************************************************/
+
+.contain-kind-word{
+  margin: 10px 0 40px;
+}
+
+.contain-rese p{
+  font-size: 14px;
+  text-align: justify;
+}
+
+.contain-rese span i{
+  color: #544541;
+}
+
+.contain-rese .span-name{
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.contain-gallery .col-md-4,.col-md-6{
+  padding: 0px;
+}
+.contain-gallery img{
+ 
+  width: 100%;
+  height: 230px;
+  object-fit: cover; /* o "contain" si prefieres que no se recorte */
+  display: block;
+}
+
+/*************************style get in touch*********************************/
+
+.contain-get-in-touch{
+  height: 550px;
+  box-shadow: -3px 0 6px rgba(61, 47, 43, 0.4),3px 0 6px rgba(61, 47, 43, 0.4);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #bdaba6;
+}
+
+.contain-get-in-touch h2{
+  text-align: center;
+  color: #3d2f2b;
+}
+
+.contain-get-in-touch img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+.contain-get-in-touch form label{
+  color: #3d2f2b;
+}
+
+@media (max-width:769px) {
+  .video-container{
+    height: 70vh;
+  }
+  .ourservices-contain{
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px 0px;
+  }
+
+  .contain-photo-get-know{
+    margin-top: 15px;
+  }
+
+  .img-our-services{
+    margin-bottom: 20px;
+  }
+
+  .contain-gallery{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .contain-get-in-touch{
+    height: 100%;
+  }
+
+  .contain-get-in-touch form{
+    margin-top: 15px;
+  }
+
+  .contain-get-in-touch form button{
+    width: 100%;
+  }
+}

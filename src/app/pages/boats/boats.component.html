@@ -1,0 +1,61 @@
+<div class="boats-image">
+  <div class="boats-overlay"></div> 
+  <div class="boats-text">
+    <h1>Boat Tours & Rentals</h1>
+    <p>Discover breathtaking destinations aboard our exclusive boats.</p>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row" *ngFor="let boat of boats">
+    <div class="col-12 col-md-6">
+      <hr />
+      <h1 class="text-center" style="color: #cea348;">{{ boat.name }}</h1>
+      <hr />
+
+      <div class="row mt-4 item-boats">
+        <div class="col-6">
+          <ul>
+            <li *ngFor="let feature of boat.featuresLeft">
+              <span class="material-symbols-outlined">{{ feature.split(':')[0] }}</span>
+              {{ feature.split(':')[1] }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li *ngFor="let feature of boat.featuresRight">
+              <span class="material-symbols-outlined">{{ feature.split(':')[0] }}</span>
+              {{ feature.split(':')[1] }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-boats">
+        <p>
+          <span class="material-symbols-outlined">groups_3</span>
+          {{ boat.capacity }} People
+        </p>
+        <p>
+          <span class="material-symbols-outlined">paid</span>
+          {{ boat.price }}<br />
+          {{ boat.extra }}
+        </p>
+      </div>
+      <div class="text-center py-3">
+        <button class="btn btn-warning text-center w-50" (click)="enviarWhatsApp('I want Information about Your Boats')">Get Now</button>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <gallery
+        [id]="'boats-' + boat.id"
+        [thumb]="true"
+        thumbPosition="bottom"
+        [nav]="true"
+      ></gallery>
+    </div>
+  </div>
+</div>
+
