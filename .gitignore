@@ -41,3 +41,14 @@ testem.log
 .DS_Store
 Thumbs.db
 .vercel
+
+# Angular local build cache (only /.angular/cache was covered before)
+/.angular
+
+# Playwright MCP session artifacts (screenshots, console logs, snapshots)
+.playwright-mcp/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example

@@ -1,0 +1,137 @@
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section class="sf-hero">
+  <div class="sf-hero-overlay"></div>
+  <div class="sf-hero-content mulata-container">
+    <a routerLink="/experiences" class="sf-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      All Experiences
+    </a>
+    <span class="eyebrow">Adventure · Barú Waters</span>
+    <h1 class="sf-hero-title">Cast Off.<br>Reel In.<br><em>Feel the Caribbean.</em></h1>
+    <p class="sf-hero-sub">A 4-hour private charter in the waters of Barú, where the thrill of fishing meets unforgettable Caribbean landscapes — perfect for first-timers and seasoned anglers alike.</p>
+    <div class="sf-hero-actions">
+      <button class="btn-gold" (click)="book()">Book via WhatsApp</button>
+      <span class="sf-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        All Gear Included
+      </span>
+    </div>
+  </div>
+  <div class="sf-hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="sf-hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ABOUT — 2 COL
+     ══════════════════════════════════ -->
+<section class="sf-about">
+  <div class="mulata-container sf-about-inner">
+
+    <div class="sf-about-media fade-left">
+      <div class="sf-about-img-stack">
+        <img src="/img/sports_fishing1.jpeg" alt="Sport fishing charter in the waters of Barú" class="sf-img-main"   loading="lazy" width="900" height="1600">
+        <img src="/img/sports_fishing2.jpeg" alt="Fresh catch on a Caribbean fishing trip"    class="sf-img-accent" loading="lazy" width="1320" height="1760">
+      </div>
+    </div>
+
+    <div class="sf-about-text fade-right">
+      <span class="eyebrow">About the Experience</span>
+      <h2 class="sf-about-title">The thrill of the catch, the calm of the sea.</h2>
+      <p>Embark on a 4-hour adventure in the waters of Barú, where the thrill of fishing meets unforgettable Caribbean landscapes. With all equipment included and professional guidance, this experience is perfect for both beginners and seasoned anglers.</p>
+      <p>Relax, connect with the sea, and enjoy a one-of-a-kind day on the Colombian Caribbean side — your private boat, crew, and gear all taken care of.</p>
+      <button class="btn-gold" (click)="book()">Reserve My Charter</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     WHAT'S INCLUDED
+     ══════════════════════════════════ -->
+<section class="sf-included">
+  <div class="mulata-container sf-included-inner">
+
+    <div class="sf-included-header fade-up">
+      <span class="eyebrow">What's Included</span>
+      <h2 class="section-title" style="color:var(--cream)">Everything<br>On Board</h2>
+    </div>
+
+    <div class="sf-included-body fade-up">
+      <ul class="sf-included-list">
+        @for (item of included; track item) {
+          <li class="sf-included-item">
+            <span class="sf-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>{{ item }}</span>
+          </li>
+        }
+      </ul>
+
+      <div class="sf-notes">
+        <span class="sf-notes-title">Good to Know</span>
+        <ul class="sf-notes-list">
+          @for (note of notes; track note.text) {
+            <li class="sf-note-item">
+              <span class="sf-note-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+              </span>
+              <span>{{ note.text }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     EXPERIENCE DETAILS
+     ══════════════════════════════════ -->
+<section class="sf-details">
+  <div class="mulata-container">
+    <div class="sf-details-grid fade-up">
+      @for (d of details; track d.label) {
+        <div class="sf-detail-item">
+          <span class="sf-detail-label">{{ d.label }}</span>
+          <span class="sf-detail-value">{{ d.value }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     GALLERY
+     ══════════════════════════════════ -->
+<section class="sf-gallery">
+  <div class="mulata-container">
+    <div class="sf-gallery-grid">
+      <img src="/img/sports_fishing3.jpeg" alt="Anglers with their catch off Barú"    class="sf-gal-img fade-up" loading="lazy" width="945" height="2048">
+      <img src="/img/sports_fishing4.jpeg" alt="Open Caribbean waters on the charter" class="sf-gal-img fade-up" loading="lazy" width="1080" height="1350">
+      <img src="/img/sports_fishing2.jpeg" alt="Fishing gear ready on board"          class="sf-gal-img fade-up" loading="lazy" width="1320" height="1760">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FINAL CTA
+     ══════════════════════════════════ -->
+<section class="sf-cta">
+  <div class="sf-cta-bg" aria-hidden="true"></div>
+  <div class="mulata-container sf-cta-inner fade-up">
+    <span class="eyebrow">The Sea Is Calling</span>
+    <h2 class="sf-cta-title">Ready to Land<br>the Big One?</h2>
+    <p class="sf-cta-sub">Message Margui on WhatsApp — she'll lock in your date and departure time in minutes. Show up 15 minutes early, and let the crew handle the rest.</p>
+    <button class="sf-cta-btn" (click)="book()">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Book My Charter
+    </button>
+    <p class="sf-cta-note">Boat for max 6 pax · Barú Waters · Lunch &amp; gear included</p>
+  </div>
+</section>

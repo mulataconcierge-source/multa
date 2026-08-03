@@ -1,52 +1,63 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent"
-     [ngClass]="{'bg-transparent': !isScrolled, 'navbar-colored': isScrolled}">
-  <div class="container-fluid align-items-center">
+<nav class="mulata-nav" [class.scrolled]="isScrolled" [class.open]="menuOpen" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
 
-    <!-- Logo siempre visible a la izquierda -->
-    <a class="navbar-brand d-lg-none" href="#">
-      <img src="/img/Mulata_Logo.png" alt="Logo" width="80px">
+    <!-- Left links — desktop only -->
+    <ul class="nav-links nav-left">
+      <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/services" (click)="closeMenu()">Concierge</a></li>
+      <li><a routerLink="/experiences" (click)="closeMenu()">Experiences</a></li>
+    </ul>
+
+    <!-- Logo — centered -->
+    <a class="nav-logo" routerLink="/home" (click)="closeMenu()" aria-label="Mulata Concierge — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="68" height="68" aria-label="Mulata Concierge">
+        <defs>
+          <style>
+            .gold { fill: #D3A542; }
+            .gold-stroke { fill: none; stroke: #D3A542; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+            .gold-line { stroke: #D3A542; stroke-width: 14; stroke-linecap: round; }
+          </style>
+        </defs>
+        <path class="gold-stroke" d="M 243 145 A 40 40 0 1 1 215 90 A 40 40 0 1 1 285 90 A 40 40 0 1 1 257 145" />
+        <line class="gold-line" x1="250" y1="120" x2="250" y2="370" />
+        <path class="gold" d="M 250,160 Q 268,180 250,200 Q 232,180 250,160 Z" />
+        <path class="gold" d="M 220 250 Q 200 210, 180 210 A 10 10 0 0 0 180 230 Q 200 230, 220 250 Z" />
+        <path class="gold" d="M 280 250 Q 300 210, 320 210 A 10 10 0 0 1 320 230 Q 300 230, 280 250 Z" />
+        <path class="gold" d="M 257 285 L 285 285 A 7 7 0 0 1 285 299 L 257 299 Z" />
+        <path class="gold" d="M 257 312 L 275 312 A 7 7 0 0 1 275 326 L 257 326 Z" />
+        <path class="gold" d="M 190 305 C 160 305, 175 330, 175 345 C 175 360, 180 405, 200 405 C 230 405, 250 400, 260 390 C 250 392, 230 391, 200 391 C 180 391, 189 360, 189 345 C 189 330, 174 315, 196 310 A 4.5 4.5 0 0 0 190 305 Z" />
+      </svg>
     </a>
 
-    <!-- Botón hamburguesa solo en móvil -->
-    <button class="navbar-toggler ms-auto" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarContenido"
-            aria-controls="navbarContenido" aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Right links — desktop only -->
+    <ul class="nav-links nav-right">
+      <li><a routerLink="/travel-guide" (click)="closeMenu()">Travel Guide</a></li>
+      <li><a routerLink="/properties" (click)="closeMenu()">Properties</a></li>
+      <li><a routerLink="/boats" (click)="closeMenu()">Boats</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-burger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation menu" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <!-- Menú colapsable -->
-    <div class="collapse navbar-collapse justify-content-between" id="navbarContenido">
+  </div>
 
-      <!-- Menú izquierda solo visible en escritorio -->
-      <ul class="navbar-nav d-none d-lg-flex flex-row gap-3">
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/home">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/services">Concierge Services</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/experiences">Experiences</a></li>
-      </ul>
-
-      <!-- Logo centrado solo en escritorio -->
-      <a class="navbar-brand mx-3 d-none d-lg-block" href="#">
-        <img src="/img/Mulata_Logo.png" alt="Logo" width="80px">
-      </a>
-
-      <!-- Menú derecho solo visible en escritorio -->
-      <ul class="navbar-nav d-none d-lg-flex flex-row gap-3">
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/island">Islands</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/private-villa">Private Villas</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/boats">Boats</a></li>
-      </ul>
-
-      <!-- Menú visible solo en móvil -->
-      <ul class="navbar-nav d-lg-none flex-column mt-3 w-100">
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/home" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/services" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Concierge Services</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/experiences" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Experiences</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/island" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Islands</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/private-villa" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Private Villas</a></li>
-        <li class="nav-item"><a class="nav-link text-white" routerLink="/boats" data-bs-toggle="collapse" data-bs-target="#navbarContenido">Boats</a></li>
-      </ul>
-
-    </div>
+  <!-- Mobile menu drawer -->
+  <div class="nav-drawer" [class.drawer-open]="menuOpen" role="menu">
+    <ul>
+      <li role="menuitem"><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+      <li role="menuitem"><a routerLink="/services" (click)="closeMenu()">Concierge Services</a></li>
+      <li role="menuitem"><a routerLink="/experiences" (click)="closeMenu()">Experiences</a></li>
+      <li role="menuitem"><a routerLink="/properties" (click)="closeMenu()">Properties</a></li>
+      <li role="menuitem"><a routerLink="/boats" (click)="closeMenu()">Boats</a></li>
+      <li role="menuitem"><a routerLink="/travel-guide" (click)="closeMenu()">Travel Guide</a></li>
+    </ul>
+    <a href="https://wa.me/573013132423?text=Hi%20Margui!%20I%27d%20love%20to%20plan%20a%20trip." target="_blank" rel="noopener noreferrer" class="drawer-cta" (click)="closeMenu()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Plan My Trip on WhatsApp
+    </a>
   </div>
 </nav>
