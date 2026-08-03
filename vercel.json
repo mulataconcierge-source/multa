@@ -1,15 +1,20 @@
 {
-  "version": 2,
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "ng build && cp dist/mulata/browser/index.csr.html dist/mulata/browser/index.html",
+  "outputDirectory": "dist/mulata/browser",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "dist/mulata/browser/**",
-      "use": "@vercel/static"
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/dist/mulata/browser/$1"
+      "source": "/(.*)\\.(avif|webp|jpg|jpeg|png|svg|mp4|woff2)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ]
 }

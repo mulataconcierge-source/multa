@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4200)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"luxury travel concierge boutique cartagena colombia caribbean warm elegant premium\" --design-system -p \"Mulata Concierge\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"caribbean warm sand coral gold tropical\" --domain color -n 3)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"landing hero testimonials service boutique\" --domain landing -n 3)",
+      "Bash(npx ng *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('dependencies',{}\\).get\\('@angular/core','?'\\)\\)\")",
+      "Bash(git stash *)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"luxury experience cards premium caribbean tropical dark elegant\" --design-system -p \"Mulata Experiences\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"card hover interactive experience gallery grid\" --domain ux -n 4)",
+      "Bash(cp /Users/alejandrotellez/Downloads/b_a_c_mp_.mp4 /Users/alejandrotellez/Documents/multa/public/videos/experiences_hero.mp4 && echo \"done\")",
+      "Bash(npx tsc *)",
+      "Bash(ipconfig getifaddr *)",
+      "Bash(lsof -iTCP -sTCP:LISTEN -n -P)",
+      "Bash(lsof -iTCP:4200 -sTCP:LISTEN -n -P)",
+      "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(sips --help)",
+      "Bash(sips --formats)",
+      "Bash(sips -s format avif -s formatOptions 68 -Z 1920 /Users/alejandrotellez/Documents/multa/public/img/island-experience/hero.jpg --out /Users/alejandrotellez/Documents/multa/public/img/island-experience/hero.avif)",
+      "Bash(rm /Users/alejandrotellez/Documents/multa/public/img/island-experience/*.jpg && \\\\ *)",
+      "Bash(sips -s format avif -s formatOptions 65 -Z 1920 '/Users/alejandrotellez/Downloads/beach_clubs/Bora Bora/Fotos/ÁREA CLUB/area club.jpg' --out /Users/alejandrotellez/Documents/multa/public/img/island-experience/bora-bora-1.avif)",
+      "Bash(sips -g all \"/Users/alejandrotellez/Documents/multa/public/img/island-experience/sabai-life-4.avif\")",
+      "Bash(sips -g all \"/Users/alejandrotellez/Documents/multa/public/img/island-experience/sabai-life-6.avif\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"luxury boat yacht rental caribbean concierge premium\" --design-system -p \"Mulata Boats\")",
+      "Bash(sed -i '' \"s/      price: '.*',//\" /Users/alejandrotellez/Documents/multa/src/app/pages/boats/boats.component.ts)",
+      "Bash(sed -i '' \"s/      extra: '.*',//\" /Users/alejandrotellez/Documents/multa/src/app/pages/boats/boats.component.ts)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"cultural tour cartagena local experience premium luxury service\" --design-system -p \"Cool Tour\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"luxury concierge travel service Caribbean Cartagena Colombia premium\" --design-system -p \"Mulata Concierge\" -f markdown)",
+      "Bash(find /Users/alejandrotellez -name \"bache.jpeg\" -o -name \"boat_home.JPG\" 2>/dev/null | head -10)",
+      "Read(//Users/alejandrotellez/**)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:consent.google.com)",
+      "Bash(bun run *)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_click",
+      "Bash(grep -n -A4 \"^a\\\\b\\\\|^a {\\\\|^a,\" src/styles.css)"
+    ],
+    "additionalDirectories": [
+      "/Users/alejandrotellez/Downloads",
+      "/Users/alejandrotellez/Documents/multa/public/img/island-experience"
+    ]
+  }
+}

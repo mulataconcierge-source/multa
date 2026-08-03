@@ -1,0 +1,158 @@
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section class="sc-hero">
+  <div class="sc-hero-overlay"></div>
+  <div class="sc-hero-content mulata-container">
+    <a routerLink="/experiences" class="sc-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      All Experiences
+    </a>
+    <span class="eyebrow">Dance &amp; Culture · Cartagena</span>
+    <h1 class="sc-hero-title">Two Left<br>Feet?<br><em>Not Anymore.</em></h1>
+    <p class="sc-hero-sub">Salsa. Champeta. Caribbean rhythm. One hour with a local instructor and you'll never look at a dance floor the same way again.</p>
+    <div class="sc-hero-actions">
+      <button class="btn-gold" (click)="book()">Book via WhatsApp</button>
+      <span class="sc-hero-hint">Shared &amp; private options available</span>
+    </div>
+  </div>
+  <div class="sc-hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="sc-hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PULL QUOTE
+     ══════════════════════════════════ -->
+<section class="sc-quote">
+  <div class="mulata-container sc-quote-inner fade-up">
+    <svg class="sc-quote-mark" viewBox="0 0 45 36" fill="currentColor" aria-hidden="true"><path d="M13 0C5.82 0 0 5.82 0 13c0 7.18 5.82 13 13 13 1.04 0 2.05-.13 3.02-.37C14.1 29.02 10.14 33 5.2 34.6L4 35l1.5 1 1-.4C12.6 33.1 19 27.5 19 19V13C19 5.82 13.18 0 6 0h7zm26 0c-7.18 0-13 5.82-13 13 0 7.18 5.82 13 13 13 1.04 0 2.05-.13 3.02-.37C40.1 29.02 36.14 33 31.2 34.6L30 35l1.5 1 1-.4C38.6 33.1 45 27.5 45 19V13C45 5.82 39.18 0 32 0h7z"/></svg>
+    <p class="sc-quote-text">In Cartagena, you don't just hear the music — you feel it in your bones. These streets were made for dancing.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ABOUT — 2 COL
+     ══════════════════════════════════ -->
+<section class="sc-about">
+  <div class="mulata-container sc-about-inner">
+
+    <div class="sc-about-media fade-left">
+      <div class="sc-about-img-stack">
+        <img src="/img/dances_feel.jpg" alt="Salsa and champeta class in Cartagena Old City" class="sc-img-main"   loading="lazy" width="1066" height="1600">
+        <img src="/img/dance.png"       alt="Local dancers celebrating Caribbean rhythm"      class="sc-img-accent" loading="lazy" width="361" height="397">
+      </div>
+    </div>
+
+    <div class="sc-about-text fade-right">
+      <span class="eyebrow">About the Experience</span>
+      <h2 class="sc-about-title">Two rhythms.<br>One hour.<br>Zero excuses.</h2>
+      <p>Connect with the vibrant Caribbean culture by learning the steps of two of Colombia's most beloved rhythms: Salsa and Champeta. Led by passionate local instructors, this is not your average dance lesson — it's a full-on celebration with music, movement, and a whole lot of laughs.</p>
+      <p>No experience needed. No coordination required. Just show up, let the beat take over, and prepare to surprise yourself.</p>
+      <button class="btn-gold" (click)="book()">I'm Ready to Dance</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CLASS OPTIONS
+     ══════════════════════════════════ -->
+<section class="sc-options">
+  <div class="mulata-container">
+    <div class="sc-options-header fade-up">
+      <span class="eyebrow">Pick Your Vibe</span>
+      <h2 class="section-title" style="color:var(--cream)">Two Ways to Get Moving</h2>
+    </div>
+    <div class="sc-options-grid fade-up">
+      @for (opt of options; track opt.type) {
+        <div class="sc-option-card">
+          <span class="sc-option-type">{{ opt.type }}</span>
+          <p class="sc-option-desc">{{ opt.desc }}</p>
+          <button class="sc-option-btn" (click)="book()">Book This →</button>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     WHAT'S INCLUDED
+     ══════════════════════════════════ -->
+<section class="sc-included">
+  <div class="mulata-container sc-included-inner">
+
+    <div class="sc-included-header fade-up">
+      <span class="eyebrow">What's Included</span>
+      <h2 class="section-title" style="color:var(--ocean)">Everything You Need<br>to Shake It Right</h2>
+    </div>
+
+    <div class="sc-included-body fade-up">
+      <ul class="sc-included-list">
+        @for (item of included; track item) {
+          <li class="sc-included-item">
+            <span class="sc-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>{{ item }}</span>
+          </li>
+        }
+      </ul>
+
+      <div class="sc-not-included">
+        <span class="sc-note-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+        </span>
+        <span>Transportation is not included</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     EXPERIENCE DETAILS
+     ══════════════════════════════════ -->
+<section class="sc-details">
+  <div class="mulata-container">
+    <div class="sc-details-grid fade-up">
+      @for (d of details; track d.label) {
+        <div class="sc-detail-item">
+          <span class="sc-detail-label">{{ d.label }}</span>
+          <span class="sc-detail-value">{{ d.value }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     GALLERY
+     ══════════════════════════════════ -->
+<section class="sc-gallery">
+  <div class="mulata-container">
+    <div class="sc-gallery-grid">
+      <img src="/img/dances_feel.jpg" alt="Caribbean dance class in Cartagena" class="sc-gal-img sc-gal-tall fade-up" loading="lazy" width="1066" height="1600">
+      <img src="/img/dance.png"       alt="Salsa steps with local instructor"  class="sc-gal-img fade-up"             loading="lazy" width="361" height="397">
+      <img src="/img/savor_moment.jpg" alt="Celebrating after dance class"     class="sc-gal-img fade-up"             loading="lazy" width="1284" height="1572">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FINAL CTA
+     ══════════════════════════════════ -->
+<section class="sc-cta">
+  <div class="sc-cta-bg" aria-hidden="true"></div>
+  <div class="mulata-container sc-cta-inner fade-up">
+    <span class="eyebrow">Warning: Side Effects May Include</span>
+    <h2 class="sc-cta-title">Uncontrollable Hip<br>Movements in Public</h2>
+    <p class="sc-cta-sub">Message Margui on WhatsApp — she'll sort your class type, time, and group size in minutes. The dance floor is waiting.</p>
+    <button class="sc-cta-btn" (click)="book()">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Let's Do This
+    </button>
+    <p class="sc-cta-note">Shared or private — Margui will find the perfect fit for your group.</p>
+  </div>
+</section>

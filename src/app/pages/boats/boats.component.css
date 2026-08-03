@@ -1,144 +1,326 @@
-.boats-image {
-  background-image: url('/img/portada_boats.jpg');
-  height: 700px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* ── Hero ─────────────────────────────────────────────── */
+.bt-hero {
   position: relative;
-  overflow: hidden;
+  height: 90vh;
+  min-height: 600px;
+  background: url('/img/portada_boats.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-/* Nueva capa oscura */
-.boats-overlay {
+.bt-hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad si quieres más oscuro */
-  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.55) 0%,
+    rgba(10, 10, 10, 0.38) 50%,
+    rgba(10, 10, 10, 0.72) 100%
+  );
 }
 
-/* Texto encima de la capa oscura */
-.boats-text {
+.bt-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.bt-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.bt-hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  color: rgba(250, 248, 244, 0.75);
+  max-width: 520px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Fleet section ────────────────────────────────────── */
+.bt-fleet {
+  background: var(--ocean);
+  padding: var(--section-v) 0;
+}
+
+.bt-fleet-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* ── Individual boat row ──────────────────────────────── */
+.bt-boat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.18);
+}
+
+.bt-boat--reverse {
+  direction: rtl;
+}
+
+.bt-boat--reverse > * {
+  direction: ltr;
+}
+
+/* ── Carousel ─────────────────────────────────────────── */
+.bt-carousel-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--ocean-light);
+}
+
+.bt-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bt-nav {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
+  transform: translateY(-50%);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 2px;
+  color: var(--cream);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
   z-index: 2;
 }
 
-.boats-text h1,p{
-    color: #fff;
+.bt-nav:hover {
+  background: rgba(201, 168, 76, 0.22);
+  border-color: var(--gold);
 }
 
-/*------------------------------------------------------------------------------------*/
-
-.item-boats ul{
-    list-style: none;
-}
-.item-boats li{
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    color: #544541;
+.bt-nav svg {
+  width: 20px;
+  height: 20px;
 }
 
-.p-boats{
-  margin-top: 20px;
-}
+.bt-nav--prev { left: 12px; }
+.bt-nav--next { right: 12px; }
 
-.p-boats p{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #544541;
-}
-
-.p-boats span{
-   font-size: 30px
-}
-
-.img-uno{
-  height: 80%; 
-  padding-top: 25px;
-}
-
-.img-uno img{
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px ;
-}
-
-gallery {
-  display: block;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-
-/* Elimina el fondo negro del visor */
-.gallery__img {
-  background-color: transparent !important;
-}
-
-/* Estilos miniaturas personalizadas */
-.gallery-thumbnails {
+.bt-dots {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
-.thumb-img {
-  width: 100px;
-  height: 60px;
-  object-fit: cover;
+.bt-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.28);
+  border: none;
   cursor: pointer;
-  border-radius: 4px;
-  transition: transform 0.2s;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
 }
 
-.thumb-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+.bt-dot--active {
+  background: var(--gold);
+  transform: scale(1.35);
 }
 
-
-
-/* Corrige el visor principal para que no desaparezca */
-g-gallery, .g-carousel, .g-image {
-  background-color: transparent !important;
-  min-height: 300px; /* evita que desaparezca */
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opcional para dar estilo */
+/* ── Boat info column ─────────────────────────────────── */
+.bt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 0.25rem;
 }
 
-g-carousel {
-  background-color: transparent !important;
-  box-shadow: none !important;
+.bt-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-/* Eliminar fondo negro del contenedor del slider */
-.g-slider,
-.g-slider-content,
-.g-box,
-gallery-slider,
-gallery {
-  background-color: #544541 !important;
-  border-radius: 10px !important;
+.bt-feet {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
-/* Asegura que la imagen ocupe todo el espacio del contenedor */
-.g-image-item {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block;
+.bt-boat-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  margin: 0;
+  letter-spacing: 0.05em;
+  line-height: 1.05;
 }
 
+/* ── Features grid ────────────────────────────────────── */
+.bt-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1.5rem;
+}
+
+.bt-feat {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.bt-feat-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+}
+
+.bt-feat-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bt-feat-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(250, 248, 244, 0.7);
+  letter-spacing: 0.02em;
+}
+
+/* ── Pricing block ────────────────────────────────────── */
+.bt-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem 1.4rem;
+  background: rgba(201, 168, 76, 0.07);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 3px 3px 0;
+}
+
+.bt-pricing-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: rgba(250, 248, 244, 0.78);
+}
+
+.bt-pricing-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold);
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.bt-pricing-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.bt-pricing-row strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.bt-price-main {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.bt-price-extra {
+  font-size: 0.76rem;
+  color: rgba(250, 248, 244, 0.45);
+  margin-top: 3px;
+}
+
+/* ── Final CTA ────────────────────────────────────────── */
+.bt-cta {
+  background: var(--dark);
+  padding: var(--section-v) 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.bt-cta-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ── Scroll animations ────────────────────────────────── */
+.fade-up,
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up    { transform: translateY(30px); }
+.fade-left  { transform: translateX(-30px); }
+.fade-right { transform: translateX(30px); }
+
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Mobile ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .bt-boat {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bt-boat--reverse {
+    direction: ltr;
+  }
+
+  .bt-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bt-hero-title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .bt-features {
+    grid-template-columns: 1fr;
+  }
+}

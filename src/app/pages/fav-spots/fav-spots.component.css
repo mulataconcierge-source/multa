@@ -1,0 +1,312 @@
+:host {
+  display: block;
+  background: var(--dark);
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.fs-hero {
+  position: relative;
+  min-height: 70svh;
+  display: flex;
+  align-items: center;
+  background: url('/img/ctg_spot.jpg') center / cover no-repeat;
+  padding: clamp(6rem, 12vw, 9rem) 0 clamp(4rem, 8vw, 6rem);
+}
+
+.fs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.78) 0%, rgba(10,10,10,0.55) 45%, rgba(10,10,10,0.95) 100%);
+}
+
+.fs-hero-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 720px;
+}
+
+.fs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 244, 0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-bottom: 0.25rem;
+}
+
+.fs-back:hover { color: var(--gold); }
+
+.fs-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.fs-hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.7vw, 1.12rem);
+  color: rgba(250, 248, 244, 0.72);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Section ──────────────────────────────────────────── */
+.fs-section {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.fs-section:nth-child(even) {
+  background: var(--ocean-muted);
+}
+
+.fs-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.fs-section-header .eyebrow { color: var(--gold); }
+
+.fs-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.fs-section-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  color: var(--gold-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.fs-section-intro {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: rgba(250, 248, 244, 0.62);
+  line-height: 1.8;
+  margin: 0.25rem 0 0;
+}
+
+/* ── Spot card ────────────────────────────────────────── */
+.fs-spot {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.22);
+}
+
+.fs-spot:first-of-type { border-top: none; }
+
+.fs-spot-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.fs-spot-name h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fs-spot-rule {
+  flex: 1;
+  height: 1px;
+  max-width: 160px;
+  background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.55), transparent);
+}
+
+/* Gallery — three uniform equal-height images */
+.fs-spot-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.fs-spot-img {
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+
+/* Body — concept left, details right */
+.fs-spot-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.fs-spot-concept {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: rgba(250, 248, 244, 0.74);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.fs-spot-concept strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.fs-spot-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fs-spot-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.fs-spot-details li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: rgba(250, 248, 244, 0.78);
+  line-height: 1.5;
+}
+
+.fs-spot-details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.fs-spot-maps {
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.4);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.fs-spot-maps:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+/* ── Final CTA ────────────────────────────────────────── */
+.fs-cta {
+  position: relative;
+  background: var(--ocean);
+  padding: clamp(4.5rem, 9vw, 8rem) 0;
+  overflow: hidden;
+}
+
+.fs-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.fs-cta-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.fs-cta-inner .eyebrow { color: var(--gold); }
+
+.fs-cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.fs-cta-sub {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: rgba(250, 248, 244, 0.62);
+  max-width: 540px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Scroll animation ─────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Mobile ───────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .fs-spot-gallery { gap: 0.5rem; }
+  .fs-spot-img { height: 150px; }
+  .fs-spot-body { grid-template-columns: 1fr; gap: 1.5rem; }
+  .fs-spot-rule { max-width: 50px; }
+  .fs-spot-name h3 { white-space: normal; }
+}
+
+@media (max-width: 560px) {
+  .fs-spot-gallery { grid-template-columns: 1fr; }
+  .fs-spot-img { height: 220px; }
+}

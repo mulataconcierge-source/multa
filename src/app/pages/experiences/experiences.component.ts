@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-experiences',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './experiences.component.html',
   styleUrl: './experiences.component.css'
 })
@@ -27,11 +28,9 @@ export class ExperiencesComponent implements OnInit {
   
 }
 
-  enviarWhatsApp(destino:string) {
-      const mensaje = `Hola, estoy interesado en la experiencia de ${destino}. ¿Podrías darme más información?`;
-      const url = `https://wa.me/573013132423?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
+  openWhatsApp(): void {
+    const msg = `Hi Margui! I'd love to plan an experience in Cartagena. Could you help me?`;
+    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
   }
-
 
 }

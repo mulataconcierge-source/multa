@@ -1,0 +1,77 @@
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section class="fs-hero">
+  <div class="fs-hero-overlay" aria-hidden="true"></div>
+  <div class="mulata-container fs-hero-body">
+    <a routerLink="/travel-guide" class="fs-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      Travel Guide
+    </a>
+    <span class="hero-eyebrow">Mulata Concierge</span>
+    <h1 class="fs-hero-title">Mulata Fav<br>Spots Guide</h1>
+    <p class="fs-hero-sub">Handpicked favorites to experience Cartagena through its flavors and nightlife — the places we send our own guests to, organized by the kind of night you're after.</p>
+    <button class="btn-gold" (click)="openWhatsApp()">Ask Margui for a Reservation</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTIONS
+     ══════════════════════════════════ -->
+@for (section of sections; track section.id) {
+  <section class="fs-section" [id]="section.id">
+    <div class="mulata-container">
+
+      <!-- Section header -->
+      <div class="fs-section-header fade-up">
+        <span class="eyebrow">{{ section.eyebrow }}</span>
+        <h2 class="fs-section-title">{{ section.title }}</h2>
+        <p class="fs-section-subtitle">{{ section.subtitle }}</p>
+        <p class="fs-section-intro">{{ section.intro }}</p>
+      </div>
+
+      <!-- Spots -->
+      @for (spot of section.spots; track spot.name) {
+        <article class="fs-spot fade-up">
+          <div class="fs-spot-name">
+            <span class="fs-spot-rule" aria-hidden="true"></span>
+            <h3>{{ spot.name }}</h3>
+            <span class="fs-spot-rule" aria-hidden="true"></span>
+          </div>
+
+          <div class="fs-spot-gallery">
+            @for (img of spot.images; track $index) {
+              <div class="fs-spot-img" [style.background-image]="'url(' + img + ')'"></div>
+            }
+          </div>
+
+          <div class="fs-spot-body">
+            <p class="fs-spot-concept"><strong>Concept:</strong> {{ spot.concept }}</p>
+            <div class="fs-spot-meta">
+              <ul class="fs-spot-details">
+                @for (d of spot.details; track $index) {
+                  <li>{{ d }}</li>
+                }
+              </ul>
+              <a class="fs-spot-maps" [href]="mapsUrl(spot)" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </article>
+      }
+
+    </div>
+  </section>
+}
+
+<!-- ══════════════════════════════════
+     FINAL CTA
+     ══════════════════════════════════ -->
+<section class="fs-cta">
+  <div class="fs-cta-bg" aria-hidden="true"></div>
+  <div class="mulata-container fs-cta-inner fade-up">
+    <span class="eyebrow">Tables Fill Up Fast</span>
+    <h2 class="fs-cta-title">Want In at the<br>Hard-to-Book Spots?</h2>
+    <p class="fs-cta-sub">Margui knows the owners, the maître d's and the back doors. Tell her where you'd like to go and she'll handle the reservation, the timing and the table.</p>
+    <button class="btn-gold" (click)="openWhatsApp()">Plan My Nights Out</button>
+  </div>
+</section>
