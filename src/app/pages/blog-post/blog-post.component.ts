@@ -21,8 +21,11 @@ export class BlogPostComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('slug') ?? '';
+    // Each post is its own concrete route carrying `data.slug`, so the build can
+    // enumerate and prerender them. The paramMap fallback keeps the component
+    // working if it is ever mounted from a parameterised route again.
+    this.route.data.subscribe(data => {
+      const slug = (data['slug'] as string) ?? this.route.snapshot.paramMap.get('slug') ?? '';
       this.post = getPostBySlug(slug);
 
       if (!this.post) {

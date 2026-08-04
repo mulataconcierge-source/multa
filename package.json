@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && cp dist/mulata/browser/index.csr.html dist/mulata/browser/index.html",
+    "build": "ng build && cp dist/mulata/browser/home/index.html dist/mulata/browser/index.html",
     "build:prerender": "ng build --prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

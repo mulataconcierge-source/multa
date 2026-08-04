@@ -4,7 +4,6 @@ import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,7 +12,6 @@ export const appConfig: ApplicationConfig = {
     // navigations — 'top' was dumping visitors at the top of long card grids.
     provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' })),
     provideHttpClient(withFetch()),
-    provideClientHydration(withEventReplay()),
-    provideAnimations()
+    provideClientHydration(withEventReplay())
   ]
 };

@@ -1,5 +1,17 @@
 import { Routes } from '@angular/router';
 
+/** Slugs of every published post. Mirrors BLOG_POSTS in blog.data.ts; kept as
+ *  plain strings so the routing table does not pull blog content into the
+ *  initial bundle. */
+const BLOG_SLUGS = [
+  '10-things-to-do-cartagena',
+  'bachelor-bachelorette-cartagena-guide',
+  'rosario-islands-day-trip-guide',
+  'honeymoon-cartagena-guide',
+  'best-restaurants-cartagena',
+  'group-travel-colombia-guide'
+];
+
 export const routes: Routes = [
   {
     path: '',
@@ -100,10 +112,14 @@ export const routes: Routes = [
     path: 'travel-guide/mulata-fav-spots',
     loadComponent: () => import('./pages/fav-spots/fav-spots.component').then(m => m.FavSpotsComponent)
   },
-  {
-    path: 'travel-guide/:slug',
+  // Each blog post is a concrete route rather than 'travel-guide/:slug'. A
+  // parameterised route cannot be enumerated by the prerenderer, so those pages
+  // would ship as an empty shell. Keep this list in sync with BLOG_POSTS.
+  ...BLOG_SLUGS.map((slug) => ({
+    path: `travel-guide/${slug}`,
+    data: { slug },
     loadComponent: () => import('./pages/blog-post/blog-post.component').then(m => m.BlogPostComponent)
-  },
+  })),
   {
     // Catch-all — must stay last. Without it, unknown URLs threw NG04002 and
     // rendered an empty shell (nav + footer only).
