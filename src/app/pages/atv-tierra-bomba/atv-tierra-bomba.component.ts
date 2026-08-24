@@ -49,7 +49,7 @@ export class AtvTierraBombaComponent implements OnInit, AfterViewInit, OnDestroy
     });
     this.metaService.updateTag({ property: 'og:title', content: 'ATV Tierra Bomba — Island Adventure Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: '10 minutes from Cartagena. A world away. Ride through the rugged island terrain of Tierra Bomba on an adrenaline-fuelled ATV tour unlike anything else in the Caribbean.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/atv-tierra-bomba' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/atv-tierra-bomba' });
   }
 
   ngAfterViewInit(): void {

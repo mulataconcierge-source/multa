@@ -43,7 +43,7 @@ export class CraftYourOwnSipComponent implements OnInit, AfterViewInit, OnDestro
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Craft Your Own Sip — Mixology Class Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'A hands-on mixology class in Cartagena\'s Old City — shake, stir, sip, and repeat. 4 cocktails, 4 appetizers, and a whole lot of fun.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/craft-your-own-sip' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/craft-your-own-sip' });
   }
 
   ngAfterViewInit(): void {

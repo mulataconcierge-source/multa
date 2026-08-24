@@ -47,7 +47,7 @@ export class PalenqueTourComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Palenque Tour — The First Free Town in the Americas | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Discover history, identity and resilience in San Basilio de Palenque. Local guide, traditional lunch, dance show and more — all included.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/palenque-tour' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/palenque-tour' });
   }
 
   ngAfterViewInit(): void {

@@ -41,7 +41,7 @@ export class VintageCarTourComponent implements OnInit, AfterViewInit, OnDestroy
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Vintage Car Tour Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Discover the timeless charm of Cartagena aboard a beautifully restored vintage car, accompanied by a knowledgeable local guide.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/vintage-car-tour' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/vintage-car-tour' });
   }
 
   ngAfterViewInit(): void {

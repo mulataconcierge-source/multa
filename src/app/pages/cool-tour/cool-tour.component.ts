@@ -41,7 +41,7 @@ export class CoolTourComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Cool Tour — Local Cartagena Experience | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Explore the Historic Center and Getsemaní alongside a local from Cartagena. A cultural experience of hidden flavors, artistic alleys and the true essence of the city.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/cool-tour' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/cool-tour' });
   }
 
   ngAfterViewInit(): void {

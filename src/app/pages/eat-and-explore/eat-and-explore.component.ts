@@ -42,7 +42,7 @@ export class EatAndExploreComponent implements OnInit, AfterViewInit, OnDestroy 
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Eat & Explore — Food Tour Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Discover the Historic Center through its most authentic flavors. Traditional sweets, fried snacks, shrimp cocktails and the history behind every bite.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/eat-and-explore' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/eat-and-explore' });
   }
 
   ngAfterViewInit(): void {

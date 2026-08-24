@@ -51,7 +51,7 @@ export class FavSpotsComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Mulata Fav Spots Guide — Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Handpicked favorites to experience Cartagena through its flavors and nightlife.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/travel-guide/mulata-fav-spots' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/travel-guide/mulata-fav-spots' });
   }
 
   ngAfterViewInit(): void {

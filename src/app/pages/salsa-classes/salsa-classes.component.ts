@@ -53,7 +53,7 @@ export class SalsaClassesComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Salsa & Champeta Classes Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Two rhythms. One hour. Zero excuses. Learn salsa and champeta from passionate local instructors in Cartagena\'s Old City.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/salsa-classes' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/salsa-classes' });
   }
 
   ngAfterViewInit(): void {

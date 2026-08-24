@@ -45,7 +45,7 @@ export class TraditionalFishingComponent implements OnInit, AfterViewInit, OnDes
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Traditional Fishing in La Boquilla | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'An authentic native fishing tour in La Boquilla combining adventure, gastronomy and community connection.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/traditional-fishing' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/traditional-fishing' });
   }
 
   ngAfterViewInit(): void {

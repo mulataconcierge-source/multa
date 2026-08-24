@@ -61,7 +61,7 @@ export class CoffeeTastingComponent implements OnInit, AfterViewInit, OnDestroy 
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Coffee Tasting Cartagena — Colombian Specialty Coffee | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Colombia grows some of the world\'s finest coffee. Now taste it the way it was meant to be experienced — three processing profiles, guided by a professional barista in Cartagena\'s Old City.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/coffee-tasting' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/coffee-tasting' });
   }
 
   ngAfterViewInit(): void {

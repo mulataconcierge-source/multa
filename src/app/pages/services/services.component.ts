@@ -21,7 +21,7 @@ constructor(private titleService: Title,private metaService: Meta){}
 
   this.metaService.updateTag({ property: 'og:title', content: 'Luxury Concierge Services in Cartagena | Mulata Concierge' });
   this.metaService.updateTag({ property: 'og:description', content: 'Enjoy personalized concierge services in Cartagena. We take care of reservations, private chefs, events, transportation, and premium hospitality.' });
-  this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/services' });
+  this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/services' });
   
 }
 

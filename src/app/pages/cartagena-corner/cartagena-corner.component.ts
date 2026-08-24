@@ -60,7 +60,7 @@ export class CartagenaCornerComponent implements OnInit, AfterViewInit, OnDestro
     });
     this.metaService.updateTag({ property: 'og:title', content: 'The Cartagenan Corner — Empanada & Hot Sauce Tasting | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Cartagena on a plate. Handcrafted empanadas, local hot sauces, and the stories behind every bite. A perfect culinary experience in the heart of the Old City.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/cartagena-corner' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/cartagena-corner' });
   }
 
   ngAfterViewInit(): void {

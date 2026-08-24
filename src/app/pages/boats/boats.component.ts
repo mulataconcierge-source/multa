@@ -293,7 +293,7 @@ export class BoatsComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Luxury Boats & Yachts in Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Charter luxury boats and yachts in Cartagena. Enjoy full-service rentals, private islands, and unforgettable sailing experiences in the Caribbean.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/boats' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/boats' });
   }
 
   ngAfterViewInit(): void {

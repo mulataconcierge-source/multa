@@ -42,7 +42,7 @@ export class CityTourComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'City Tour Cartagena — Iconic Sites & Hidden Stories | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'A full experience of Cartagena — history, art, and the city\'s two greatest gems. Private transportation and expert guide included.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/city-tour' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/city-tour' });
   }
 
   ngAfterViewInit(): void {

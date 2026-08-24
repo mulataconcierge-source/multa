@@ -4,8 +4,12 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 
-/** Canonical host. www is primary — sitemap, OG tags and DNS all use it. */
-export const SITE_ORIGIN = 'https://www.mulataconcierge.com.co';
+/**
+ * Canonical host. The apex is the only hostname configured in Vercel, so it is
+ * the one that actually serves and holds a certificate. Keep this in step with
+ * sitemap.xml, robots.txt and the canonical in index.html.
+ */
+export const SITE_ORIGIN = 'https://mulataconcierge.com.co';
 
 /**
  * Keeps <link rel="canonical"> and og:url in step with the active route.

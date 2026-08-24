@@ -44,7 +44,7 @@ export class CookingClassComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Cooking Class Cartagena — Caribbean Cuisine Experience | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'A hands-on culinary experience guided by an expert chef. Learn to prepare Cartagena\'s most iconic dishes and take those flavors home with you.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/cooking-class' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/cooking-class' });
   }
 
   ngAfterViewInit(): void {

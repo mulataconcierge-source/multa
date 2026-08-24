@@ -43,7 +43,7 @@ export class RumTastingComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Rum Tasting Cartagena — Caribbean Spirits Experience | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'A sensory journey through Colombian rum — its history, production secrets, and unique Caribbean flavors. Guided by an expert bartender in the heart of the Old City.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/rum-tasting' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/rum-tasting' });
   }
 
   ngAfterViewInit(): void {

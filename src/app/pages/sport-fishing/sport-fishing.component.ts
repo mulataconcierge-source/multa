@@ -49,7 +49,7 @@ export class SportFishingComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Sport Fishing — Barú Caribbean Charter Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Embark on a 4-hour adventure in the waters of Barú, where the thrill of fishing meets unforgettable Caribbean landscapes.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences/sport-fishing' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences/sport-fishing' });
   }
 
   ngAfterViewInit(): void {

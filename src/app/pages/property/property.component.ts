@@ -160,7 +160,7 @@ export class PropertyComponent implements OnInit, OnDestroy {
     });
     this.metaService.updateTag({ property: 'og:title', content: 'Private Properties in Cartagena | Mulata Concierge' });
     this.metaService.updateTag({ property: 'og:description', content: 'Browse 15 handpicked vacation properties in Cartagena. Curated by Mulata Concierge.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/properties' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/properties' });
   }
 
   ngOnDestroy(): void {

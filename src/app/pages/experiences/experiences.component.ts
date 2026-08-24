@@ -24,7 +24,7 @@ export class ExperiencesComponent implements OnInit {
 
   this.metaService.updateTag({ property: 'og:title', content: 'Exclusive Experiences in Cartagena | Mulata Concierge' });
   this.metaService.updateTag({ property: 'og:description', content: 'Live unforgettable experiences in Cartagena with Mulata Concierge. From VIP nightlife to private chefs and wellness retreats—tailored for you.' });
-  this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/experiences' });
+  this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/experiences' });
   
 }
 

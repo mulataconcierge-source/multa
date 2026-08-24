@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
 
     this.metaService.updateTag({ property: 'og:title', content: 'Mulata Concierge | Luxury Travel in Cartagena & Colombia' });
     this.metaService.updateTag({ property: 'og:description', content: 'Your private concierge for unforgettable trips in Cartagena. All curated by Margui, a Cartagena local with 11 years of experience.' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://www.mulataconcierge.com.co/' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://mulataconcierge.com.co/' });
   }
 
   onSubmit() {
