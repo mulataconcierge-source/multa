@@ -207,6 +207,6 @@ export class PropertyComponent implements OnInit, OnDestroy {
 
   inquire(propertyName: string): void {
     const msg = `Hi Margui! I'm interested in the property "${propertyName}". Could you share more details and availability?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 }

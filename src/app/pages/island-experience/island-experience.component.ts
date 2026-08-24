@@ -154,7 +154,7 @@ export class IslandExperienceComponent implements OnInit, AfterViewInit, OnDestr
       ? `Hi Margui! I'd love to organize an island experience in Cartagena: ${context}`
       : `Hi Margui! I'd love to plan an island day in Cartagena.`;
     if (isPlatformBrowser(this.platformId)) {
-      window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
     }
   }
 

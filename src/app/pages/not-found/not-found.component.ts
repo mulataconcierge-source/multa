@@ -22,6 +22,6 @@ export class NotFoundComponent implements OnInit {
 
   openWhatsApp(): void {
     const msg = `Hi Margui! I was looking at the Mulata site and couldn't find the page I wanted. Could you help me?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 }

@@ -78,6 +78,6 @@ export class CartagenaCornerComponent implements OnInit, AfterViewInit, OnDestro
 
   book(): void {
     const msg = `Hi! I'm interested in The Cartagenan Corner experience in Cartagena. Could you give me more details and availability?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 }

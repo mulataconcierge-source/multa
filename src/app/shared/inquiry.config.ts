@@ -29,7 +29,7 @@
 export const INQUIRY_ENDPOINT = '/api/inquiry';
 
 /** Margui's WhatsApp number, digits only, including country code. */
-export const WHATSAPP_NUMBER = '573013132423';
+export const WHATSAPP_NUMBER = '573150173841';
 
 export interface InquiryPayload {
   fullName: string;

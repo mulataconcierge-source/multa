@@ -274,7 +274,7 @@ export class BoatsComponent implements OnInit, AfterViewInit, OnDestroy {
     const msg = boatName
       ? `Hi, I'm interested in chartering the ${boatName}. Could you send me more details?`
       : `Hi, I'd like information about your boat charter fleet. Could you help me?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
   constructor(

@@ -63,6 +63,6 @@ export class TraditionalFishingComponent implements OnInit, AfterViewInit, OnDes
 
   book(): void {
     const msg = `Hi! I'm interested in booking the Traditional Fishing experience in La Boquilla. Could you give me more details?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 }

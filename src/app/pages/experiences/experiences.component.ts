@@ -30,7 +30,7 @@ export class ExperiencesComponent implements OnInit {
 
   openWhatsApp(): void {
     const msg = `Hi Margui! I'd love to plan an experience in Cartagena. Could you help me?`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
 }

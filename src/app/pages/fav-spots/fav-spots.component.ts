@@ -75,6 +75,6 @@ export class FavSpotsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   openWhatsApp(): void {
     const msg = `Hi Margui! I'm looking at the Mulata Fav Spots guide and would love your help with reservations and recommendations.`;
-    window.open(`https://wa.me/573013132423?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/573150173841?text=${encodeURIComponent(msg)}`, '_blank');
   }
 }
